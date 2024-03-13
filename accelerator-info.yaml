@@ -1,0 +1,26 @@
+id: 8f7b3ae3-aecd-4450-9817-f76c8740c0ca
+timestamp: 2024-03-13T15:37:08Z
+username: sdubois
+source: TanzuCLI
+accelerator:
+  name: tanzu-java-web-app
+  source:
+    image: harbor.apps.tapmc.tanzudemohub.com/library/tap-packages@sha256:d540c97b1a5418b1dbd3dd88130613864670a9c574dc9e4686c6a7a54c0091b5
+fragments:
+  - name: build-wrapper-gradle
+    source:
+      image: harbor.apps.tapmc.tanzudemohub.com/library/tap-packages@sha256:66c6cece0ec0192f906d8a534b6e104a56eaab92ed109bac448f4374ab55f444
+  - name: build-wrapper-maven
+    source:
+      image: harbor.apps.tapmc.tanzudemohub.com/library/tap-packages@sha256:aa55054cc58a3587e44dce37fb26df3f2d1c64e6fd59b82d55c026dcf18f5d45
+  - name: devcontainer
+    source:
+      image: harbor.apps.tapmc.tanzudemohub.com/library/tap-packages@sha256:0c9f2b8294149c6b3d8b2138eb074d010bdffb234ea65d7f73f65c16d710e618
+  - name: java-version
+    source:
+      image: harbor.apps.tapmc.tanzudemohub.com/library/tap-packages@sha256:8cd01e1aeee6d2acd89e16f8fa281aec4fd6a60ead447eae7d61a484dcb805df
+  - name: tap-workload
+    source:
+      image: harbor.apps.tapmc.tanzudemohub.com/library/tap-packages@sha256:f17ac7f6efca5cdeaf27c98420afda15fd424e67821e215ca736911f266f731f
+options:
+  projectName: java-webapp
